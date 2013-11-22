@@ -9,12 +9,13 @@ module.exports = function(params, callback) {
 		};
 	}
 	
-	var params = {
-			from: params.from || 'zh',
-			to: params.to || 'en',
-			query: params.query || ''
-		},
-		data = querystring.stringify(params);
+	params = {
+		from: params.from || 'zh',
+		to: params.to || 'en',
+		query: params.query || ''
+	};
+	
+	var data = querystring.stringify(params);
 		options = {
 			host: 'fanyi.baidu.com',
 			port: 80,
